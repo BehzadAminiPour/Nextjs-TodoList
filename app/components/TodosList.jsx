@@ -1,12 +1,24 @@
 import SingleTodo from "./SingleTodo";
+async function getTodos() {
+  const res = await fetch("http://localhost:4000/todos", {
+    // const res = await fetch("https://hr-todo.sahda.ir", {
+    next: {
+      revalidate: 0,
+    },
+  });
+  return res.json();
+}
 
 
-export default function TodosList() {
+
+export default async function TodosList() {
+  let todos = await getTodos();
+
   return (
     <div className="mt-14 px-2">
-       <SingleTodo/>
-       <SingleTodo/>
-       <SingleTodo/>
+      {todos.map((todo) => (
+        <SingleTodo key={todo.id} {...todo} />
+      ))}
     </div>
-  )
+  );
 }

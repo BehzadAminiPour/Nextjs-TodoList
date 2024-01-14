@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "d2e0",
+      "item": "go to gym",
+      "type": 1
+    },
+    {
+      "item": "Help ",
+      "type": 2,
+      "id": "c082"
+    },
+    {
+      "id": "f26d",
+      "item": "Reading book",
+      "type": 1
+    }
+  ]
+}
