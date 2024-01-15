@@ -13,9 +13,7 @@ export default function AddTodo() {
       item,
       type:1,
     };
-
-    const res = await fetch("http://localhost:4000/todos", {
-      // const res = await fetch("https://hr-todo.sahda.ir/create/task/", {
+      const res = await fetch("https://hr-todo.sahda.ir/create/task/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTodo),

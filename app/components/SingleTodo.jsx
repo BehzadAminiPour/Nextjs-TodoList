@@ -9,7 +9,7 @@ export default function SingleTodo({ item, id, type }) {
   const [checked, setChecked] = useState(type);
   const handleDelete = async (todoId) => {
     try {
-      const res = await fetch(`http://localhost:4000/todos/${todoId}`, {
+      const res = await fetch(`https://hr-todo.sahda.ir/update.php/${todoId}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });
@@ -30,7 +30,7 @@ export default function SingleTodo({ item, id, type }) {
 
   const handleSave = async () => {
     try {
-      const res = await fetch(`http://localhost:4000/todos/${id}`, {
+      const res = await fetch(`https://hr-todo.sahda.ir/update.php/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ item: editedTitle, type: checked }),

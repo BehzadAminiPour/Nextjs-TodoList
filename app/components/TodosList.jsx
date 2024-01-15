@@ -1,7 +1,6 @@
 import SingleTodo from "./SingleTodo";
 async function getTodos() {
-  const res = await fetch("http://localhost:4000/todos", {
-    // const res = await fetch("https://hr-todo.sahda.ir", {
+    const res = await fetch("https://hr-todo.sahda.ir/", {
     next: {
       revalidate: 0,
     },
